@@ -6,8 +6,9 @@
 参考:[https://linux.cn/lfs/LFS-BOOK-7.7-systemd/index.html](https://linux.cn/lfs/LFS-BOOK-7.7-systemd/index.html)
 
 ------------------
+## 2017.5.26
 
-##  issue
+###  issues
 * 若发现`./configure`或`make`或`make install`过程中出现缺少某个libxxx.so文件，大都是因为其路径不在动态加载库的搜索路径中．然我发现改变`/etc/ld.so.conf`同时执行`/sbin/ldconfig`也无济于事．在LFS搭建前文以及[这里](http://www.cnblogs.com/sukai/p/3669330.html)在`/tools/lib/`目录下建立软链接即可解决问题．我首先遇到的是在第六章安装gcc的时候发现这个问题，而后借助搜索引擎．同时执行某些二进制文件的时候也会报这个错，因此`make check`还是很有用的，虽然很占用SBU，但是可以发现缺少哪些库，尽早解决问题．
 
 
@@ -55,6 +56,10 @@ devtmpfs       /dev         devtmpfs mode=0755,nosuid    0     0
 ```
 
 * 系统boot之后会报错，主要是systemd的问题．首先我发现的问题init进程起不来，后来发现还是少了某些库文件．之后根据[这里](https://forums.gentoo.org/viewtopic-t-1026806-start-25.html)直接把init换成systemd进程，但reboot后发现网络时间有问题．由于LFS没有提供对网络驱动的支持，因此在认真阅读参考资料后去除掉相关配置，之后便可以成功启动．
+
+
+----------------------------
+
 
 ## 下一步
 * 网络支持和桌面化以及iso化...
