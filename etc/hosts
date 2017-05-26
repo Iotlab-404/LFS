@@ -1,1 +1,4 @@
-127.0.0.1 localhost Rutk1t0r
+# Begin /etc/hosts (network card version)
+
+127.0.0.1 localhost
+::1       localhost

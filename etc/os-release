@@ -1,0 +1,4 @@
+NAME="Linux From Scratch"
+VERSION="7.7-systemd"
+ID=lfs
+PRETTY_NAME="Linux From Scratch 7.7-systemd"

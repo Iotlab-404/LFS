@@ -1,0 +1,19 @@
+# Begin /etc/fstab
+
+# 文件系统  挂载点  文件类型     挂载选项             dump  fsck
+#                                                              order
+
+/dev/sda11     /            ext4    defaults            1     1
+/dev/sda6      swap         swap     pri=1               0     0
+proc           /proc        proc     nosuid,noexec,nodev 0     0
+sysfs          /sys         sysfs    nosuid,noexec,nodev 0     0
+devpts         /dev/pts     devpts   gid=5,mode=620      0     0
+tmpfs          /run         tmpfs    defaults            0     0
+devtmpfs       /dev         devtmpfs mode=0755,nosuid    0     0
+/dev/sda15     /usr         ext4    defaults           1        2
+/dev/sda16     /home   		ext4    defaults            1       2 
+/dev/sda10	   /boot        ext4    defaults            1      2
+/dev/cdrom	/media/cdrom	auto	ro,noauto,user,exec	0 0
+/dev/fd0	/media/floppy	auto	rw,noauto,user,sync	0 0
+
+# End /etc/fstab
