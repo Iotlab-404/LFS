@@ -64,3 +64,4 @@ devtmpfs       /dev         devtmpfs mode=0755,nosuid    0     0
 ## 下一步
 * 网络支持和桌面化以及iso化...
 * 推荐新版8.0[https://lctt.github.io/LFS-BOOK/index.html](https://lctt.github.io/LFS-BOOK/index.html)
+* BLFS[http://docs.huihoo.com/lfs/blfs-1.0/index.html](http://docs.huihoo.com/lfs/blfs-1.0/index.html)
